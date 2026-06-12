@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAC — Document Viewer</title>
+  <meta name="description" content="Internal document viewer for Prelim, Final and FWP templates." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Bank of America" class="logo" />
+      <span class="brand-divider" aria-hidden="true"></span>
+      <span class="brand-title">Document Viewer</span>
+    </div>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle document list" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="layout">
+    <!-- Navigation -->
+    <aside id="sidebar" class="sidebar" aria-label="Documents">
+      <div class="type-tabs" role="tablist" aria-label="Document type">
+        <button class="type-tab" role="tab" data-type="prelim">Prelim</button>
+        <button class="type-tab" role="tab" data-type="final">Final</button>
+        <button class="type-tab" role="tab" data-type="fwp">FWP</button>
+    
+      </div>
+
+      <nav class="doc-list" id="docList" aria-label="Templates"></nav>
+
+      <p class="sidebar-hint">Select a template to open it.</p>
+    </aside>
+
+    <!-- Viewer -->
+    <section class="viewer" aria-label="PDF viewer">
+      <div class="viewer-bar">
+        <div class="viewer-meta">
+          <span id="viewerType" class="viewer-type"></span>
+          <span id="viewerTitle" class="viewer-title">No document open</span>
+        </div>
+        <div class="viewer-actions">
+          <a id="openNewTab" class="vbtn" target="_blank" rel="noopener" hidden>Open PDF in new tab</a>
+          <a id="downloadDocx" class="vbtn vbtn-primary" download hidden>
+            <span class="vbtn-icon" aria-hidden="true">&#8595;</span> Download Word
+          </a>
+        </div>
+      </div>
+
+      <div class="viewer-stage">
+        <div id="emptyState" class="empty-state">
+          <img src="assets/logo.svg" alt="" class="empty-logo" />
+          <h2>Pick a document to begin</h2>
+          <p>Choose <strong>Prelim</strong>, <strong>Final</strong> or <strong>FWP</strong>, then select a template from the list.</p>
+        </div>
+        <iframe id="pdfFrame" class="pdf-frame" title="PDF document" hidden></iframe>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
