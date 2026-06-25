@@ -27,7 +27,7 @@ const DOCUMENTS = {
       { label: "Goldman Sachs (GS)",  pdf: "pdfs/final/goldman-sachs.pdf",      docx: "docx/final/goldman-sachs.docx" },
       { label: "UBS",                 pdf: "pdfs/final/ubs.pdf",                docx: "docx/final/ubs.docx" },
       { label: "TOC",                 pdf: "pdfs/final/toc.pdf",                docx: "docx/final/toc.docx" },
-        { label: "Test Exhibit File",                 pdf: "pdfs/final/Test-Exhibit.pdf",                docx: "docx/final/Test-Exhibit.docx" },
+      { label: "Test Exhibit File",   pdf: "pdfs/final/Test-Exhibit.pdf",       docx: "docx/final/Test-Exhibit.docx" },
     ],
   },
   fwp: {
